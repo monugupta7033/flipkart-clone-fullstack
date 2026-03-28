@@ -1,5 +1,7 @@
 import axios from 'axios'
-const api = axios.create({ baseURL: import.meta.env.VITE_API_URL })
+const api = axios.create({
+  baseURL: 'https://flipkart-backend-9xdm.onrender.com',
+})
 export const getProducts = (params) => api.get('/products', { params })
 export const getProduct = (id) => api.get(`/products/${id}`)
 export const getCategories = () => api.get('/categories')
